@@ -1,5 +1,5 @@
 <?php
-		$conn = mysqli_connect("localhost", "root", "", "staff");
+		$conn = mysqli_connect("localhost", "root", "", "medstar1");
 		if($conn === false){
 			die("ERROR: Could not connect. "
 				. mysqli_connect_error());
@@ -11,11 +11,13 @@
 	$username=strval($_REQUEST['username']);
 	$password=strval($_REQUEST['password']);
 	$d_id=strval($_REQUEST['d_id']);
-	echo $staff_id;
+	$link_address='#login.html';
+//	echo $staff_id;
 		$sql = "INSERT INTO Staff (staff_id,name,role,username,password,d_id) VALUES ('$staff_id','$name','$role','$username','$password','$d_id')";
 	echo $sql;
 		if(mysqli_query($conn, $sql)){
-			echo "successfull";
+		echo '<a href="'.$link_address.'">Link</a>';
+		echo "successfull";
 		} else{
 			echo "ERROR: Hush! Sorry $sql. "
 				. mysqli_error($conn);
