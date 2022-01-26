@@ -2,6 +2,9 @@
 Database name - medstar
 
 
+
+Below are the queries related to the  table 
+
 ALTER TABLE Staff ADD FOREIGN KEY (d_id) REFERENCES department(dpt_id);
 
 
