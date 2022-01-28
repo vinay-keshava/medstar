@@ -16,7 +16,7 @@
     border: 4px solid black;
     width:500px;
     transform :translate(2000px,-600px);
-    height: 600px;
+    height: 700px;
     padding: 20px;
 }
 .button1 {
@@ -58,7 +58,7 @@ border: 2px solid black;
       <li class="active"><a href="#">Home</a></li>
      
       </li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -70,19 +70,24 @@ border: 2px solid black;
 
 <br>
 <br><center>
-    <h1 style="text-align: center;background-color: black;color: white;padding: 30px;transform: translate(-35px,-23px);width: 40%;font-size: 30px;">Sign Up </h1>
+    <h1 style="text-align: center;background-color: black;color: white;padding: 30px;transform: translate(-35px,-23px);width: 40%;font-size: 30px;">Add New Medication Record </h1>
     </center>
 	<br><br><div class="main">
         <center>
         <div class="internal" style="text-align: left;border: 4px solid black;transform: translateY(-40px);">
-            <form action="registration2.php" method="post">
-<center>             Staff Id:<input type="text" name="staff_id" placeholder="Staff id"><br><br><br>
-                Name: <input type="text" name="name" placeholder="Name"><br><br><br>
-                Role: <input type="text" name="role" placeholder="Role"><br><br><br>
-               Username: <input type="text" name="username" placeholder="Username"><br><br><br>
-                Password: <input type="password" name="password" placeholder="Password"><br><br><br>
-                Department Id: <input type="text" name="d_id" placeholder="Department Id"><br><br><br>
-</center>
+            <form action="medication.php" method="post">
+        Patient Id: <input type="text" name="p_id" placeholder="Patient ID"><br><br><br>
+                Staff Id: <input type="text" name="staff_id" placeholder="Staff ID"><br><br><br>
+               Tablet ID: <input type="text" name="t_id" placeholder="Tablet ID"><br><br><br>
+                Prescription MAN: <input type="text " name="prescp_M_A_N" placeholder="Prescription in format of M-A-N"><br><br><br>
+                Number of Days : <input type="text" name="no_of_days" placeholder="No of Days for giving the medication"><br><br><br>
+		 Status: <input type="text" name="status" placeholder="Status"><br><br><br>
+		Morning : <input type="text" name="morning" placeholder="Medication Status -Morning"><br><br><br>
+		Afternoon : <input type="text" name="afternoon" placeholder="Medication Status -Afternoon"><br><br><br>
+		Night : <input type="text" name="night" placeholder="Medication Status -Night"><br><br><br>
+
+
+
                <center><input class="button1" style="height: 40px;width: 110px;font-size: 20px;" type="submit" name="submit" value="SUBMIT"></center> <BR>
             </form>
         </div>
@@ -90,49 +95,8 @@ border: 2px solid black;
     </div>
 
 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "medstar1";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
 
 
-$query = "SELECT * FROM department";
-$result = mysqli_query($conn, $query);
-?>
-<table border ="1" cellspacing="0" cellpadding="20" class="dpt_table" >
-  <tr>
-    <th>Dept Id</th>
-    <th>Dept Name</th>
-    <th>Dept Location</th>
-  </tr>
-<?php
-if (mysqli_num_rows($result) > 0) {
-  $sn=1;
-  while($data = mysqli_fetch_assoc($result)) {
- ?>
- <tr>
-   <td><?php echo $sn; ?> </td>
-   <td><?php echo $data['dpt_id']; ?> </td>
-   <td><?php echo $data['dpt_name']; ?> </td>
-   <td><?php echo $data['dpt_location']; ?> </td>
- <tr>
- <?php
-  $sn++;}} else { ?>
-    <tr>
-     <td colspan="8">No data found</td>
-    </tr>
- <?php } ?>
- </table
-
-?>
 </body>
 </html>
 

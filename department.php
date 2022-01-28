@@ -7,7 +7,7 @@
 	echo "hi";
         $dpt_id=strval($_REQUEST['dpt_id']);
         $dpt_name=strval($_REQUEST['dpt_name']);
-	$dpt_location=strval($_REQUEST['$dept_location']);
+	$dpt_location=strval($_REQUEST['dpt_location']);
 
 //	echo $staff_id;
 		$sql = "INSERT INTO department (dpt_id,dpt_name,dpt_location) VALUES ('$dpt_id','$dpt_name','$dpt_location')";

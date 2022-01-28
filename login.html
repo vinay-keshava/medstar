@@ -1,11 +1,22 @@
     <html>  
     <head>  
-        <title>PHP login system</title>  
+        <title>Login </title>  
         <link rel = "stylesheet" type = "text/css" href = "login.css">   
     </head>  
-    <body>  
-        <div id = "frm">  
-            <h1>Login</h1>  
+<style>
+body{
+ background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(226,226,226,1) 100%); 
+}   
+#frm
+{
+ background: rgb(226,226,226);
+background: linear-gradient(90deg, rgba(226,226,226,1) 42%, rgba(0,0,0,1) 100%); 
+
+} </style>
+<body>  
+        <div id = "frm" >  <center>
+            <h1>Login</h1>  </center>
             <form name="f1" action = "login.php" onsubmit = "return validation()" method = "POST">  
                 <p>  
                     <label> UserName: </label>  

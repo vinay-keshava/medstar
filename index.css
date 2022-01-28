@@ -5,10 +5,12 @@
 html, body{
   height: 100%;
   font-weight: 800;
+
 }
 
 body{
-  background: #030321;
+ background: rgb(34,193,195);
+background: linear-gradient(153deg, rgba(34,193,195,1) 38%, rgba(71,45,253,1) 100%); 
   font-family: Arial;
 }
 
