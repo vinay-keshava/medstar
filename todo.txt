@@ -1,0 +1,7 @@
+display department
+display patient
+display medication
+update medication
+login
+successfull click here to go dashboard
+Error not inserted 
