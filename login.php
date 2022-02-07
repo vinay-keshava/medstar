@@ -9,7 +9,7 @@ echo "hi";
 		echo "$username $password"
             $username = mysqli_real_escape_string($con, $username);
             $password = mysqli_real_escape_string($con, $password);
-            $sql = "select *from Staff where username ='$username' and password ='$password'";
+            $sql = "select username,password1 from login where username=$username and password1='$password' ";
             $result = mysqli_query($con, $sql);
             echo "$result";
 		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);

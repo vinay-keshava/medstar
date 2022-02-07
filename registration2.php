@@ -12,9 +12,9 @@
 	$password=strval($_REQUEST['password']);
 	$d_id=strval($_REQUEST['d_id']);
 	$link_address='dashboard.html';
-//	echo $staff_id;
-		$sql = "INSERT INTO Staff (staff_id,name,role,username,password2,d_id) VALUES ('$staff_id','$name','$role','$username','$password','$d_id')";
-//	echo $sql;
+echo $staff_id;
+		$sql = "INSERT INTO Staff (staff_id,name,role,username,password,d_id) VALUES ('$staff_id','$name','$role','$username','$password','$d_id')";
+	echo $sql;
 		if(mysqli_query($conn, $sql)){
 		echo '<a href="'.$link_address.'">Link</a>';
 		echo "successfull";
