@@ -24,9 +24,8 @@
         $name=$_REQUEST['name'];
         $dept_id=$_REQUEST['dept_id'];
         $s_id=$_REQUEST['s_id'];
-        $ph_no=intval($_REQUEST['ph_no']);
-        $age=$_REQUEST['age'];
- 
+        $ph_no=strval($_REQUEST['ph_no']);
+        $age=strval($_REQUEST['age']);
  
                 $sql = "INSERT INTO patient(p_id,name,d_id,staff_id,phone_no,age) VALUES ('$p_id','$name','$dept_id','$s_id','$ph_no','$age')";
                 if(mysqli_query($conn, $sql)){

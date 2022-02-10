@@ -17,7 +17,7 @@ background: linear-gradient(90deg, rgba(226,226,226,1) 42%, rgba(0,0,0,1) 100%);
 <body>  
         <div id = "frm" >  <center>
             <h1>Login</h1>  </center>
-            <form name="f1" action = "login.php" onsubmit = "return validation()" method = "POST">  
+            <form name="f1" action = "dashboard.html" onsubmit = "return validation()" method = "POST">  
                 <p>  
                     <label> UserName: </label>  
                     <input type = "text" id ="user" name  = "user" />  
@@ -26,8 +26,9 @@ background: linear-gradient(90deg, rgba(226,226,226,1) 42%, rgba(0,0,0,1) 100%);
                     <label> Password: </label>  
                     <input type = "password" id ="pass" name  = "pass" />  
                 </p>  
-                <p>     
-                    <input type =  "submit" id = "btn" value = "Login" />  
+                <p>     <center>
+<button   onclick="document.location='dashboard.html'">Press here</button>
+			  </center>
                 </p>  
             </form>  
         </div>  
